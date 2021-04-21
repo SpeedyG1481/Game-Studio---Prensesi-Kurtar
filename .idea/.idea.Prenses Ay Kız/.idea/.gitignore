@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/modules.xml
+/.idea.Prenses Ay Kız.iml
+# Datasource local storage ignored files
+/../../../../../../:\Unity Projects\Prenses Ay Kız\.idea\.idea.Prenses Ay Kız\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
