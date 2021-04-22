@@ -59,6 +59,7 @@ namespace Parent
 
         public void Hit(float amount)
         {
+            if (IsDead()) return;
             var damage = (float) (amount - (Math.Sqrt(defencePower)));
             health -= damage;
             if (health <= 0)
@@ -73,6 +74,7 @@ namespace Parent
 
         public void Damage(Entity otherEntity)
         {
+            if (IsDead() || otherEntity.IsDead()) return;
             otherEntity.Hit(damagePower);
         }
 
@@ -83,16 +85,19 @@ namespace Parent
 
         protected void IncreaseSpeed(float speed)
         {
+            if (IsDead()) return;
             Speed = Speed + speed > maxSpeed ? maxSpeed : Speed + speed;
         }
 
         protected void DecreaseSpeed(float speed)
         {
+            if (IsDead()) return;
             Speed = Speed - speed < 0 ? 0 : Speed - speed;
         }
 
         protected void SetSpeed(float speed)
         {
+            if (IsDead()) return;
             Speed = speed;
             if (Speed > maxSpeed)
             {

@@ -4,6 +4,7 @@
     {
         Loader,
         Menu,
+        Market,
         Level1,
     }
 }

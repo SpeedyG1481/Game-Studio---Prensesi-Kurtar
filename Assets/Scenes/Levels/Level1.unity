@@ -135,6 +135,49 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4893750431245770056}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &465540685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 465540686}
+  - component: {fileID: 465540687}
+  m_Layer: 0
+  m_Name: Banner 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &465540686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465540685}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 689.0266, y: 63.874023, z: -26.063095}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 994117705}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &465540687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465540685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813de8ce366dafe4aa1ac3b90f5ee238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,8 +373,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553397415}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.4, y: 9.3, z: 0}
-  m_LocalScale: {x: 20, y: 13, z: 2.5835438}
+  m_LocalPosition: {x: -31, y: -6, z: 0}
+  m_LocalScale: {x: 9.24652, y: 6.5526075, z: 2.5835438}
   m_Children: []
   m_Father: {fileID: 1168592852}
   m_RootOrder: 1
@@ -638,6 +681,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3341430885191659087}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &994117704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 994117705}
+  m_Layer: 0
+  m_Name: Ads
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &994117705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994117704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 497.0864, y: 642.2625, z: -208.22914}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 465540686}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1063682156 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5888885868833760085, guid: 7e74b633520993a46a641e3aa71df19a,
@@ -1283,12 +1357,12 @@ PrefabInstance:
     - target: {fileID: 5888885868833760085, guid: 7e74b633520993a46a641e3aa71df19a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1086
+      value: -1057
       objectReference: {fileID: 0}
     - target: {fileID: 5888885868833760085, guid: 7e74b633520993a46a641e3aa71df19a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 665
+      value: 655
       objectReference: {fileID: 0}
     - target: {fileID: 5888885868833760085, guid: 7e74b633520993a46a641e3aa71df19a,
         type: 3}
