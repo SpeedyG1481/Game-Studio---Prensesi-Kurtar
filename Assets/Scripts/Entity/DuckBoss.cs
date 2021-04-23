@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Entity
 {
-    public class RoboBoss : Parent.Entity, IAttackable, IMoveable
+    public class DuckBoss : Parent.Entity, IAttackable, IMoveable
     {
         public float distanceOfDetector = 35F;
         private bool _deadStatus;
@@ -39,7 +39,7 @@ namespace Entity
                     var distance = Mathf.Abs(player.transform.position.x - transform.position.x);
                     if (!player.IsDead())
                     {
-                        if (distance > 8F)
+                        if (distance > 6F)
                         {
                             var x = transform.position.x < player.transform.position.x ? 1 : -1;
                             Move(x);
@@ -78,7 +78,7 @@ namespace Entity
             if ((!(Timer - lastAttackTime > attackSpeed))) return;
             lastAttackTime = Timer;
             Animator.SetTrigger(CharacterAttack);
-            var collides = Physics2D.OverlapCircleAll(transform.position, 8F, 1);
+            var collides = Physics2D.OverlapCircleAll(transform.position, 6F, 1);
             foreach (var collide in collides)
             {
                 var otherGameObject = collide.gameObject;
