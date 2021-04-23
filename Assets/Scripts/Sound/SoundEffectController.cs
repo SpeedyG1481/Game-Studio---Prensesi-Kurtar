@@ -1,38 +1,43 @@
-using Sound;
 using UnityEngine;
 
-public class SoundEffectController : MonoBehaviour
+namespace Sound
 {
-    private static AudioClip _roboShoot, _roboAttack, _playerAttack, _playerMove;
-    private static AudioSource _audioSource;
-
-
-    void Start()
+    public class SoundEffectController : MonoBehaviour
     {
-        _audioSource = GetComponent<AudioSource>();
-        _roboShoot = Resources.Load<AudioClip>("Sound/robot_shoot_attack");
-        _roboAttack = Resources.Load<AudioClip>("Sound/robo_attack");
-        _playerAttack = Resources.Load<AudioClip>("Sound/player_attack");
-        _playerMove = Resources.Load<AudioClip>("Sound/player_run");
-    }
+        private static AudioClip _roboShoot, _roboAttack, _playerAttack;
+        private static AudioSource _audioSource;
 
 
-    public static void Play(SoundEnum @enum)
-    {
-        switch (@enum)
+        void Start()
         {
-            case SoundEnum.RoboShoot:
-                _audioSource.PlayOneShot(_roboShoot);
-                break;
-            case SoundEnum.RoboAttack:
-                _audioSource.PlayOneShot(_roboAttack);
-                break;
-            case SoundEnum.PlayerAttack:
-                _audioSource.PlayOneShot(_playerAttack);
-                break;
-            case SoundEnum.PlayerMove:
-                _audioSource.PlayOneShot(_playerMove);
-                break;
+            _audioSource = GetComponent<AudioSource>();
+            _roboShoot = Resources.Load<AudioClip>("Sound/robot_shoot_attack");
+            _roboAttack = Resources.Load<AudioClip>("Sound/robo_attack");
+            _playerAttack = Resources.Load<AudioClip>("Sound/player_attack");
+        }
+
+
+        public static void Play(SoundEnum @enum)
+        {
+            AudioClip clip = null;
+            switch (@enum)
+            {
+                case SoundEnum.RoboShoot:
+                    clip = _roboShoot;
+                    break;
+                case SoundEnum.RoboAttack:
+                    clip = _roboAttack;
+                    break;
+                case SoundEnum.PlayerAttack:
+                    clip = _playerAttack;
+                    break;
+            }
+
+            if (clip != null)
+            {
+                _audioSource.volume = 1.0F;
+                _audioSource.PlayOneShot(clip);
+            }
         }
     }
 }

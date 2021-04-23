@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8546726082570562762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.7958, y: -2.562, z: 0}
-  m_LocalScale: {x: 0.9491744, y: 0.9740969, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -131,7 +131,6 @@ MonoBehaviour:
   distanceOfDetector: 20
   shootPower: 7.5
   bullet: {fileID: 6229659486407867169, guid: cb6b7a10831f8f64ba22c4ff636cfb73, type: 3}
-  collider2D: {fileID: 8546726082570562768}
 --- !u!50 &8546726082570562769
 Rigidbody2D:
   serializedVersion: 4

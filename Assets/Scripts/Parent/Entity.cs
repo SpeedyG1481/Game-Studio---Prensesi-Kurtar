@@ -37,7 +37,6 @@ namespace Parent
 
         private void FixedUpdate()
         {
-            Animator.SetBool(CharacterJump, !Mathf.Approximately(RGB.velocity.y, 0));
             Animator.SetInteger(CharacterHeal, (int) health);
             Animator.SetFloat(CharacterSpeed, Mathf.Abs(Speed));
             Timer += Time.fixedDeltaTime;

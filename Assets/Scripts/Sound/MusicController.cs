@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicController : MonoBehaviour
+namespace Sound
 {
-    void Awake()
+    public class MusicController : MonoBehaviour
     {
-        DontDestroyOnLoad(transform.gameObject);
+        void Awake()
+        {
+            DontDestroyOnLoad(transform.gameObject);
+        }
     }
 }
