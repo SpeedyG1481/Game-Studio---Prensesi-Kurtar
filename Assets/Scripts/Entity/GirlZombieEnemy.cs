@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Entity
 {
-    public class ZombieEnemy : Parent.Entity, IAttackable, IMoveable, IJumpable
+    public class GirlZombieEnemy : Parent.Entity, IAttackable, IMoveable, IJumpable
     {
         private bool _deadStatus = false;
         public float distanceOfDetector = 20F;

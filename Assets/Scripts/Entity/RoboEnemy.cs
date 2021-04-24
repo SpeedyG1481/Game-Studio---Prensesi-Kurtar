@@ -87,7 +87,7 @@ namespace Entity
             if ((!(Timer - lastAttackTime > attackSpeed))) return;
             lastAttackTime = Timer;
 
-            if (distance > 2.8F)
+            if (distance > 3.45F)
             {
                 Shoot();
             }
@@ -101,7 +101,7 @@ namespace Entity
         {
             Animator.SetTrigger(CharacterAttack);
             SoundEffectController.Play(SoundEnum.RoboAttack);
-            var collides = Physics2D.OverlapCircleAll(this.transform.position, 2.8F, 1);
+            var collides = Physics2D.OverlapCircleAll(this.transform.position, 3.45F, 1);
             foreach (var collide in collides)
             {
                 var otherGameObject = collide.gameObject;
