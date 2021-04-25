@@ -4,7 +4,7 @@ namespace Sound
 {
     public class SoundEffectController : MonoBehaviour
     {
-        private static AudioClip _roboShoot, _roboAttack, _playerAttack;
+        private static AudioClip _roboShoot, _roboAttack, _playerAttack, _coin;
         private static AudioSource _audioSource;
 
 
@@ -14,6 +14,7 @@ namespace Sound
             _roboShoot = Resources.Load<AudioClip>("Sound/robot_shoot_attack");
             _roboAttack = Resources.Load<AudioClip>("Sound/robo_attack");
             _playerAttack = Resources.Load<AudioClip>("Sound/player_attack");
+            _coin = Resources.Load<AudioClip>("Sound/coin_pickup");
         }
 
 
@@ -30,6 +31,9 @@ namespace Sound
                     break;
                 case SoundEnum.PlayerAttack:
                     clip = _playerAttack;
+                    break;
+                case SoundEnum.Coin:
+                    clip = _coin;
                     break;
             }
 

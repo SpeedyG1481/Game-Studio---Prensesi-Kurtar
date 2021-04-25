@@ -8,9 +8,27 @@ namespace Entity
     {
         private bool _deadStatus = false;
         public float distanceOfDetector = 20F;
+        private bool _firstUpdate;
+
+        private void FirstUpdate()
+        {
+            var enemyReduce = GameController.GetEnemyReducerBuff();
+            damagePower -= enemyReduce / 2.5F;
+            defencePower -= enemyReduce / 2.5F;
+            maxHealth -= enemyReduce * 2;
+            health = maxHealth;
+        }
 
         void Update()
         {
+            if (!_firstUpdate)
+            {
+                _firstUpdate = true;
+                FirstUpdate();
+            }
+
+            if (!GameController.GameStatus) return;
+
             if (IsDead() && !_deadStatus)
             {
                 _deadStatus = true;

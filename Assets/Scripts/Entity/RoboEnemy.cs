@@ -12,10 +12,27 @@ namespace Entity
         public float shootPower = 10.0F;
         public GameObject bullet;
         private bool _deadStatus;
+        private bool _firstUpdate;
+
+        private void FirstUpdate()
+        {
+            var enemyReduce = GameController.GetEnemyReducerBuff();
+            damagePower -= enemyReduce / 2.5F;
+            defencePower -= enemyReduce / 2.5F;
+            maxHealth -= enemyReduce * 2;
+            health = maxHealth;
+        }
 
         void Update()
         {
-            
+            if (!_firstUpdate)
+            {
+                _firstUpdate = true;
+                FirstUpdate();
+            }
+
+            if (!GameController.GameStatus) return;
+
             if (IsDead() && !_deadStatus)
             {
                 _deadStatus = true;
@@ -28,7 +45,6 @@ namespace Entity
                 RobotController();
                 Animator.SetBool(CharacterJump, !Mathf.Approximately(RGB.velocity.y, 0));
             }
-              
         }
 
 

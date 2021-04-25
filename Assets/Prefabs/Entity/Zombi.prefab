@@ -332,9 +332,9 @@ MonoBehaviour:
   fallDeadPosition: -135
   health: 0
   maxHealth: 125
-  damagePower: 6.5
-  attackSpeed: 4.5
-  defencePower: 12.5
+  damagePower: 7.5
+  attackSpeed: 4.75
+  defencePower: 13
   lastAttackTime: 0
   healthBar: {fileID: 0}
-  distanceOfDetector: 20
+  distanceOfDetector: 22

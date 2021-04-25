@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageEffect : MonoBehaviour
+namespace Other
 {
-    void Start()
+    public class DamageEffect : MonoBehaviour
     {
-        Destroy(gameObject, 2.5F);
+        void Start()
+        {
+            Destroy(gameObject, 2.5F);
+        }
     }
-    
 }

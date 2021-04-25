@@ -692,14 +692,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 0.005
-  maxSpeed: 4
+  maxSpeed: 4.5
   jumpFloat: 475
   fallDeadPosition: -135
   health: 0
-  maxHealth: 200
-  damagePower: 17.75
-  attackSpeed: 5.5
-  defencePower: 15
+  maxHealth: 210
+  damagePower: 18
+  attackSpeed: 5.75
+  defencePower: 22.75
   lastAttackTime: 0
   healthBar: {fileID: 0}
   distanceOfDetector: 35

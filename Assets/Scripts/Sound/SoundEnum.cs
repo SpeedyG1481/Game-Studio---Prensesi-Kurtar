@@ -2,6 +2,6 @@
 {
     public enum SoundEnum
     {
-        RoboShoot, RoboAttack, PlayerAttack, 
+        RoboShoot, RoboAttack, PlayerAttack, Coin
     }
 }

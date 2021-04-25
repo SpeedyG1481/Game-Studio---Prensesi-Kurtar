@@ -1,17 +1,20 @@
 using UI.Loader;
 using UnityEngine;
 
-public class IntroAnimator : MonoBehaviour
+namespace UI.Intro
 {
-    private float _timer = 0F;
-    public float introTime = 5F;
-
-    void Update()
+    public class IntroAnimator : MonoBehaviour
     {
-        _timer += Time.deltaTime;
-        if (_timer > introTime)
+        private float _timer;
+        public float introTime = 5F;
+
+        void Update()
         {
-            SceneLoader.Load(Scenes.Menu);
+            _timer += Time.deltaTime;
+            if (_timer > introTime)
+            {
+                SceneLoader.Load(Scenes.Menu);
+            }
         }
     }
 }

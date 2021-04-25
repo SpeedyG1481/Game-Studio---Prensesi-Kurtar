@@ -6,11 +6,44 @@ namespace Entity
 {
     public class Character : Parent.Entity, IAttackable, IMoveable, IJumpable
     {
+        public GameObject deadGUI;
+        private bool _firstUpdate;
+
         void Update()
         {
-            if (IsDead()) return;
+            if (!_firstUpdate)
+            {
+                _firstUpdate = true;
+                FirstUpdate();
+            }
+
+            if (IsDead())
+            {
+                deadGUI.SetActive(true);
+                if (transform.position.y <= fallDeadPosition)
+                {
+                    RGB.velocity = Vector2.zero;
+                    RGB.gravityScale = 0.0F;
+                }
+            }
+
+            if (IsDead() || !GameController.GameStatus) return;
             CharacterController();
             Animator.SetBool(CharacterJump, !Mathf.Approximately(RGB.velocity.y, 0));
+        }
+
+        private void FirstUpdate()
+        {
+            GameController.GameStatus = true;
+            var attackSpeedAttach = GameController.GetUserAttackSpeedBuff();
+            var attackDamageAttach = GameController.GetUserAttackDamageBuff();
+            var defencePowerAttach = GameController.GetUserDefencePowerBuff();
+            var speedAttach = GameController.GetUserSpeedPowerBuff();
+
+            damagePower += attackDamageAttach;
+            attackSpeed -= attackSpeedAttach;
+            defencePower += defencePowerAttach;
+            maxSpeed += speedAttach;
         }
 
         // ReSharper disable Unity.PerformanceAnalysis

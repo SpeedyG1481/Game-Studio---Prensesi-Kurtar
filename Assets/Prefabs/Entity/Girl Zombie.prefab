@@ -317,7 +317,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &4459450105675661469
 Animator:
   serializedVersion: 3
@@ -355,9 +355,9 @@ MonoBehaviour:
   fallDeadPosition: -135
   health: 0
   maxHealth: 115
-  damagePower: 7.5
+  damagePower: 8.75
   attackSpeed: 3.5
-  defencePower: 13.5
+  defencePower: 8
   lastAttackTime: 0
   healthBar: {fileID: 0}
   distanceOfDetector: 22.5

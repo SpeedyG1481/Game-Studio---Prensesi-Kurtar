@@ -118,18 +118,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 0.45
-  maxSpeed: 3.5
+  maxSpeed: 6
   jumpFloat: 350
   fallDeadPosition: -135
   health: 0
   maxHealth: 75
-  damagePower: 8.75
+  damagePower: 10.75
   attackSpeed: 3.75
-  defencePower: 5.5
+  defencePower: 12.75
   lastAttackTime: 0
   healthBar: {fileID: 0}
-  distanceOfDetector: 20
-  shootPower: 7.5
+  distanceOfDetector: 25
+  shootPower: 9.75
   bullet: {fileID: 6229659486407867169, guid: cb6b7a10831f8f64ba22c4ff636cfb73, type: 3}
 --- !u!50 &8546726082570562769
 Rigidbody2D:
