@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Loader.unity
     guid: ec3c789c638bce945a37e1b294ad69c7
   - enabled: 1
-    path: Assets/Scenes/Rankings.unity
-    guid: e866d1f3a00e3484f98760b1db397cf6
-  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: cbe47aca8a4672e48b1d6f06c8a06147
+  - enabled: 1
+    path: Assets/Scenes/Levels.unity
+    guid: cea16755e1466a241ab5d9ca6572e109
   - enabled: 1
     path: Assets/Scenes/Market.unity
     guid: 03b983bc0e7ce304f937b0369e703233

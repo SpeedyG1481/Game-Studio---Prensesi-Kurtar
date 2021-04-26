@@ -7,10 +7,9 @@ namespace Other
     {
         public int coinValue = 1;
         public float flipSpeed = 0.1F;
-        public bool isGameEnd = false;
         public ParticleSystem effect;
         public GameObject completeLevelGUI;
-        public Parent.Entity mustBeDead;
+        public Parent.Entity[] mustBeDead;
 
         void Update()
         {
@@ -24,12 +23,6 @@ namespace Other
                 Destroy(gameObject);
                 GameController.AddCoin(coinValue);
                 SoundEffectController.Play(SoundEnum.Coin);
-                if (isGameEnd && effect != null && (mustBeDead == null || mustBeDead.IsDead()))
-                {
-                    GameController.GameStatus = false;
-                    Instantiate(effect, transform.position, Quaternion.Euler(0, 0, 0));
-                    completeLevelGUI.SetActive(true);
-                }
             }
         }
     }

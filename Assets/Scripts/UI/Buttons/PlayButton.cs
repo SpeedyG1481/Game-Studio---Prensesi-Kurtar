@@ -42,7 +42,7 @@ namespace UI.Buttons
 
         public void OnClick()
         {
-            SceneLoader.Load(Scenes.Level1);
+            SceneLoader.Load(Scenes.Levels);
         }
 
         void Update()

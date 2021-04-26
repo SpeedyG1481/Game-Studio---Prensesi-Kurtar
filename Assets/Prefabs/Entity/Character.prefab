@@ -122,7 +122,7 @@ MonoBehaviour:
   speedMultiplier: 0.25
   maxSpeed: 17.5
   jumpFloat: 475
-  fallDeadPosition: -135
+  fallDeadPosition: -210
   health: 0
   maxHealth: 100
   damagePower: 12.5
@@ -131,6 +131,7 @@ MonoBehaviour:
   lastAttackTime: 0
   healthBar: {fileID: 5888885868833760073, guid: 7e74b633520993a46a641e3aa71df19a,
     type: 3}
+  deadGUI: {fileID: 0}
 --- !u!60 &4893750432047135781
 PolygonCollider2D:
   m_ObjectHideFlags: 0

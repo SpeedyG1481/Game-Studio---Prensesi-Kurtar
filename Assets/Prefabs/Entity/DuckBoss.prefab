@@ -641,7 +641,7 @@ MonoBehaviour:
   speedMultiplier: 0.03
   maxSpeed: 7
   jumpFloat: 475
-  fallDeadPosition: -135
+  fallDeadPosition: -210
   health: 0
   maxHealth: 145
   damagePower: 21

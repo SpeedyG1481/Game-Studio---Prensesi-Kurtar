@@ -4,7 +4,15 @@ namespace Sound
 {
     public class SoundEffectController : MonoBehaviour
     {
-        private static AudioClip _roboShoot, _roboAttack, _playerAttack, _coin;
+        private static AudioClip _roboShoot,
+            _roboAttack,
+            _playerAttack,
+            _coin,
+            _zombieDead,
+            _zombieAttack,
+            _duckBossAttack,
+            _roboBossAttack;
+
         private static AudioSource _audioSource;
 
 
@@ -15,6 +23,10 @@ namespace Sound
             _roboAttack = Resources.Load<AudioClip>("Sound/robo_attack");
             _playerAttack = Resources.Load<AudioClip>("Sound/player_attack");
             _coin = Resources.Load<AudioClip>("Sound/coin_pickup");
+            _zombieDead = Resources.Load<AudioClip>("Sound/zombie_dead");
+            _zombieAttack = Resources.Load<AudioClip>("Sound/zombie_attack");
+            _duckBossAttack = Resources.Load<AudioClip>("Sound/duck_boss_attack");
+            _roboBossAttack = Resources.Load<AudioClip>("Sound/robo_boss_attack");
         }
 
 
@@ -35,9 +47,22 @@ namespace Sound
                 case SoundEnum.Coin:
                     clip = _coin;
                     break;
+                case SoundEnum.ZombieDead:
+                    clip = _zombieDead;
+                    break;
+                case SoundEnum.ZombieAttack:
+                    clip = _zombieAttack;
+                    break;
+                case SoundEnum.DuckBossAttack:
+                    clip = _duckBossAttack;
+                    break;
+                case SoundEnum.RoboBossAttack:
+                    clip = _roboBossAttack;
+                    break;
             }
 
-            if (clip != null)
+            var sound = PlayerPrefs.GetInt("Sound") == 1;
+            if (sound && clip != null)
             {
                 _audioSource.volume = 1.0F;
                 _audioSource.PlayOneShot(clip);

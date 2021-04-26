@@ -1,11 +1,10 @@
 ﻿using UI.Loader;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public static class GameController
 {
-
     public static bool GameStatus = false;
-    
+
     public static readonly int AttackDamageCost = 100;
     public static readonly int AttackSpeedCost = 80;
     public static readonly int DefencePowerCost = 120;

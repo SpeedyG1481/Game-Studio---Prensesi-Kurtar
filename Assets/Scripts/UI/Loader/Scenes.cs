@@ -6,6 +6,7 @@
         Menu,
         Rankings,
         Market,
+        Levels,
         Level1,
         Level2,
         Level3,
@@ -25,16 +26,6 @@
         Level17,
         Level18,
         Level19,
-        Level20,
-        Level21,
-        Level22,
-        Level23,
-        Level24,
-        Level25,
-        Level26,
-        Level27,
-        Level28,
-        Level29,
-        Level30,
+        Level20
     }
 }

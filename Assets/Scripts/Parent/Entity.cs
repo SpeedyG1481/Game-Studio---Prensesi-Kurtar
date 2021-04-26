@@ -15,7 +15,7 @@ namespace Parent
         public float speedMultiplier = 0.45F;
         public float maxSpeed = 25.0F;
         public float jumpFloat = 475F;
-        public float fallDeadPosition = -135F;
+        public float fallDeadPosition = -210F;
         protected float Speed;
 
         public float health;
