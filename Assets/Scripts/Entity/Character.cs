@@ -1,6 +1,7 @@
 using Parent;
 using Sound;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Entity
 {
@@ -8,6 +9,9 @@ namespace Entity
     {
         public GameObject deadGUI;
         private bool _firstUpdate;
+        public Joystick joystick;
+        public Button attackButton;
+        public Button jumpButton;
 
         void Update()
         {
@@ -44,12 +48,27 @@ namespace Entity
             attackSpeed -= attackSpeedAttach;
             defencePower += defencePowerAttach;
             maxSpeed += speedAttach;
+
+            attackButton.onClick.AddListener(AttackButtonListener);
+            jumpButton.onClick.AddListener(JumpButtonListener);
+        }
+
+        private void JumpButtonListener()
+        {
+            if (!IsDead())
+                Jump();
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
+        private void AttackButtonListener()
+        {
+            if (!IsDead())
+                Attack();
+        }
+
         private void CharacterController()
         {
-            var inputHorizontal = Input.GetAxis("Horizontal");
+            var inputHorizontal = joystick.Horizontal;
             if (inputHorizontal != 0)
             {
                 Move(inputHorizontal);
@@ -57,17 +76,6 @@ namespace Entity
             else
             {
                 SetSpeed(0);
-            }
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                Jump();
-            }
-
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                Attack();
             }
         }
 

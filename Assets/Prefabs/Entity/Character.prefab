@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 7d7c077f15a28604f81377f9a8527477, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36df7a829c6e4ce498363df1135d5b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMultiplier: 0.25
   maxSpeed: 17.5
-  jumpFloat: 475
+  jumpFloat: 575
   fallDeadPosition: -210
   health: 0
   maxHealth: 100
@@ -132,6 +132,9 @@ MonoBehaviour:
   healthBar: {fileID: 5888885868833760073, guid: 7e74b633520993a46a641e3aa71df19a,
     type: 3}
   deadGUI: {fileID: 0}
+  joystick: {fileID: 0}
+  attackButton: {fileID: 0}
+  jumpButton: {fileID: 0}
 --- !u!60 &4893750432047135781
 PolygonCollider2D:
   m_ObjectHideFlags: 0
