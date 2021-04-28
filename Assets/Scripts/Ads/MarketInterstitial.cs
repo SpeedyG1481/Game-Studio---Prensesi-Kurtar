@@ -1,3 +1,4 @@
+using System;
 using GoogleMobileAds.Api;
 using UnityEngine;
 
@@ -24,6 +25,11 @@ namespace Ads
             _interstitial = new InterstitialAd(adId);
             var adRequest = new AdRequest.Builder().Build();
             _interstitial.LoadAd(adRequest);
+            _interstitial.OnAdLoaded += AdLoaded;
+        }
+
+        private void AdLoaded(object sender, EventArgs e)
+        {
             _interstitial.Show();
         }
     }

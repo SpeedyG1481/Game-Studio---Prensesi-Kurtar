@@ -12,11 +12,6 @@ namespace Sound
             _source = GetComponent<AudioSource>();
         }
 
-        void Awake()
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-
         void Update()
         {
             var sound = PlayerPrefs.GetInt("Sound") == 1;

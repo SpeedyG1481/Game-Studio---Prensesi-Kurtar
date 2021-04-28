@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -14,11 +13,22 @@ namespace UI.Level
 
         void Update()
         {
-            attackDamage.text = String.Format("{0:.##}", GameController.GetUserAttackDamageBuff());
-            attackSpeed.text = String.Format("{0:.##}", 1 / GameController.GetUserAttackSpeedBuff());
-            speed.text = String.Format("{0:.##}", GameController.GetUserSpeedPowerBuff());
-            enemyReduce.text = String.Format("{0:.##}", GameController.GetEnemyReducerBuff());
-            defencePower.text = String.Format("{0:.##}", GameController.GetUserDefencePowerBuff());
+            attackDamage.text = GameController.GetUserAttackDamageBuff() > 0
+                ? $"{GameController.GetUserAttackDamageBuff():.##}"
+                : "0";
+            attackSpeed.text =
+                GameController.GetUserAttackSpeedBuff() != 0
+                    ? $"{1 / GameController.GetUserAttackSpeedBuff():.##}"
+                    : "0";
+            speed.text = GameController.GetUserSpeedPowerBuff() > 0
+                ? $"{GameController.GetUserSpeedPowerBuff():.##}"
+                : "0";
+            enemyReduce.text = GameController.GetEnemyReducerBuff() > 0
+                ? $"{GameController.GetEnemyReducerBuff():.##}"
+                : "0";
+            defencePower.text = GameController.GetUserDefencePowerBuff() > 0
+                ? $"{GameController.GetUserDefencePowerBuff():.##}"
+                : "0";
         }
     }
 }
