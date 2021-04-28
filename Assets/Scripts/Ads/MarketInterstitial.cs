@@ -24,11 +24,20 @@ namespace Ads
                 adId = androidAdId;
             }
 
+            if (GameController.DebugMode)
+                adId = GameController.AdmobTestInterstitial;
 
             _interstitial = new InterstitialAd(adId);
             var adRequest = new AdRequest.Builder().Build();
-            _interstitial.LoadAd(adRequest);
             _interstitial.OnAdLoaded += AdLoaded;
+            _interstitial.LoadAd(adRequest);
+            if (GameController.DebugMode)
+                _interstitial.OnAdFailedToLoad += AdFailed;
+        }
+
+        private void AdFailed(object sender, AdFailedToLoadEventArgs e)
+        {
+            Debug.Log(e.Message);
         }
 
         private void AdLoaded(object sender, EventArgs e)

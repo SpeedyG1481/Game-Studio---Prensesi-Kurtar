@@ -4,52 +4,65 @@ using UI.Parent;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DoubleCoinButton : MonoBehaviour, IButtonListener
+namespace Ads
 {
-    private RewardBasedVideoAd _rewarded;
-    public int coinAmount;
-
-    private string androidAdId = "ca-app-pub-8847668020520840/2004658060";
-    private string iOSAdId = "ca-app-pub-8847668020520840/7256984740";
-
-    private Button _button;
-
-    void Start()
+    public class DoubleCoinButton : MonoBehaviour, IButtonListener
     {
-        _button = GetComponent<Button>();
-        _button.onClick.AddListener(OnClick);
-    }
+        private RewardBasedVideoAd _rewarded;
+        public int coinAmount;
 
+        private string androidAdId = "ca-app-pub-8847668020520840/2004658060";
+        private string iOSAdId = "ca-app-pub-8847668020520840/7256984740";
 
-    private void RewardedAdLoad()
-    {
-        var adId = iOSAdId;
-        if (Application.platform == RuntimePlatform.Android)
+        private Button _button;
+
+        void Start()
         {
-            adId = androidAdId;
+            _button = GetComponent<Button>();
+            _button.onClick.AddListener(OnClick);
         }
-        
-        _rewarded = RewardBasedVideoAd.Instance;
-        var adRequest = new AdRequest.Builder().Build();
-        _rewarded.LoadAd(adRequest, adId);
-        _rewarded.OnAdLoaded += AdLoaded;
-        _rewarded.OnAdRewarded += AdRewarded;
-    }
-    
 
-    private void AdRewarded(object sender, Reward e)
-    {
-        GameController.AddCoin(coinAmount);
-    }
 
-    private void AdLoaded(object sender, EventArgs args)
-    {
-        _rewarded.Show();
-    }
-    
-    public void OnClick()
-    {
-        _button.interactable = false;
-        MobileAds.Initialize(x => { RewardedAdLoad(); });
+        private void RewardedAdLoad()
+        {
+            var adId = iOSAdId;
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                adId = androidAdId;
+            }
+
+            if (GameController.DebugMode)
+                adId = GameController.AdmobTestRewarded;
+
+            _rewarded = RewardBasedVideoAd.Instance;
+            var adRequest = new AdRequest.Builder().Build();
+            _rewarded.OnAdLoaded += AdLoaded;
+            _rewarded.OnAdRewarded += AdRewarded;
+            _rewarded.LoadAd(adRequest, adId);
+            if (GameController.DebugMode)
+                _rewarded.OnAdFailedToLoad += AdFailed;
+        }
+
+        private void AdFailed(object sender, AdFailedToLoadEventArgs e)
+        {
+            Debug.Log(e.Message);
+        }
+
+
+        private void AdRewarded(object sender, Reward e)
+        {
+            GameController.AddCoin(coinAmount);
+        }
+
+        private void AdLoaded(object sender, EventArgs args)
+        {
+            _rewarded.Show();
+        }
+
+        public void OnClick()
+        {
+            _button.interactable = false;
+            MobileAds.Initialize(x => { RewardedAdLoad(); });
+        }
     }
 }

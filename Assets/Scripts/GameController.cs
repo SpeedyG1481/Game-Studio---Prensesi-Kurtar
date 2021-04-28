@@ -4,6 +4,10 @@ using UnityEngine;
 public static class GameController
 {
     public static bool GameStatus = false;
+    public const bool DebugMode = true;
+
+    public const string AdmobTestInterstitial = "ca-app-pub-3940256099942544/1033173712";
+    public const string AdmobTestRewarded = "ca-app-pub-3940256099942544/5224354917";
 
     public const int AttackDamageCost = 100;
     public const int AttackSpeedCost = 80;
