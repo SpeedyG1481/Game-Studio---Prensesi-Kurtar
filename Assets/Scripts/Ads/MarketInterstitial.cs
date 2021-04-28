@@ -19,9 +19,12 @@ namespace Ads
         private void InterstitialAdLoad()
         {
             var adId = iOSAdId;
-#if UNITY_ANDROID
-            adId = androidAdId;
-#endif
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                adId = androidAdId;
+            }
+
+
             _interstitial = new InterstitialAd(adId);
             var adRequest = new AdRequest.Builder().Build();
             _interstitial.LoadAd(adRequest);

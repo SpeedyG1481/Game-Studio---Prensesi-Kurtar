@@ -43,11 +43,14 @@ namespace Entity
             var attackDamageAttach = GameController.GetUserAttackDamageBuff();
             var defencePowerAttach = GameController.GetUserDefencePowerBuff();
             var speedAttach = GameController.GetUserSpeedPowerBuff();
+            var enemyReducerBuff = GameController.GetEnemyReducerBuff();
 
-            damagePower += attackDamageAttach;
+            damagePower += attackDamageAttach * 1.1125F;
             attackSpeed -= attackSpeedAttach;
-            defencePower += defencePowerAttach;
+            defencePower += defencePowerAttach * 1.1125F;
             maxSpeed += speedAttach;
+            maxHealth += enemyReducerBuff * 22.5F;
+            health = maxHealth;
 
             attackButton.onClick.AddListener(AttackButtonListener);
             jumpButton.onClick.AddListener(JumpButtonListener);

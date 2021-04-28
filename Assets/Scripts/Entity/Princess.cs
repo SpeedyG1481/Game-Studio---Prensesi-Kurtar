@@ -1,50 +1,53 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Princess : MonoBehaviour
+namespace Entity
 {
-    public Parent.Entity[] mustBeDead;
-    public GameObject completeGameGUI;
-    public Image background;
-
-    void Start()
+    public class Princess : MonoBehaviour
     {
-        background.canvasRenderer.SetAlpha(0.0F);
-    }
+        public Parent.Entity[] mustBeDead;
+        public GameObject completeGameGUI;
+        public Image background;
 
-    void Update()
-    {
-        CheckGameEnd();
-    }
-
-    private void CheckGameEnd()
-    {
-        var collides = Physics2D.OverlapCircleAll(this.transform.position, 7.6F, 1);
-        foreach (var other in collides)
+        void Start()
         {
-            if (other.CompareTag("Player"))
+            background.canvasRenderer.SetAlpha(0.0F);
+        }
+
+        void Update()
+        {
+            CheckGameEnd();
+        }
+
+        private void CheckGameEnd()
+        {
+            var collides = Physics2D.OverlapCircleAll(this.transform.position, 7.6F, 1);
+            foreach (var other in collides)
             {
-                if (MustBeDeadIterator())
+                if (other.CompareTag("Player"))
                 {
-                    GameController.GameStatus = false;
-                    completeGameGUI.SetActive(true);
-                    background.CrossFadeAlpha(1.0F, 2.75F, false);
+                    if (MustBeDeadIterator())
+                    {
+                        GameController.GameStatus = false;
+                        completeGameGUI.SetActive(true);
+                        background.CrossFadeAlpha(1.0F, 2.75F, false);
+                    }
                 }
             }
         }
-    }
 
-    private bool MustBeDeadIterator()
-    {
-        if (mustBeDead != null)
-            foreach (var e in mustBeDead)
-            {
-                if (!e.IsDead())
+        private bool MustBeDeadIterator()
+        {
+            if (mustBeDead != null)
+                foreach (var e in mustBeDead)
                 {
-                    return false;
+                    if (!e.IsDead())
+                    {
+                        return false;
+                    }
                 }
-            }
 
-        return true;
+            return true;
+        }
     }
 }

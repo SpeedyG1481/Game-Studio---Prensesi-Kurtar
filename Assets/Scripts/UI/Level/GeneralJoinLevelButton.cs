@@ -31,13 +31,10 @@ namespace UI.Level
 
         public void OnClick()
         {
-            if (scene != null)
+            var currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+            if (((int) scene - startIndex) <= currentLevel)
             {
-                var currentLevel = PlayerPrefs.GetInt("CurrentLevel");
-                if (((int) scene - startIndex) <= currentLevel)
-                {
-                    SceneLoader.Load(scene);
-                }
+                SceneLoader.Load(scene);
             }
         }
     }

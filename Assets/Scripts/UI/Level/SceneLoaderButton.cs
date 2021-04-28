@@ -3,20 +3,22 @@ using UI.Parent;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SceneLoaderButton : MonoBehaviour, IButtonListener
+namespace UI.Level
 {
-    public Scenes scene;
-    private Button _button;
-
-    void Start()
+    public class SceneLoaderButton : MonoBehaviour, IButtonListener
     {
-        _button = GetComponent<Button>();
-        _button.onClick.AddListener(OnClick);
-    }
+        public Scenes scene;
+        private Button _button;
 
-    public void OnClick()
-    {
-        if (scene != null)
+        void Start()
+        {
+            _button = GetComponent<Button>();
+            _button.onClick.AddListener(OnClick);
+        }
+
+        public void OnClick()
+        {
             SceneLoader.Load(scene);
+        }
     }
 }

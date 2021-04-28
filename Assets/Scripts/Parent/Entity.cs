@@ -6,10 +6,10 @@ namespace Parent
     public class Entity : MonoBehaviour
     {
         protected static readonly int CharacterAttack = Animator.StringToHash("CharacterAttack");
-        protected static readonly int CharacterSpeed = Animator.StringToHash("CharacterSpeed");
+        private static readonly int CharacterSpeed = Animator.StringToHash("CharacterSpeed");
         protected static readonly int CharacterJump = Animator.StringToHash("CharacterJump");
-        protected static readonly int CharacterHeal = Animator.StringToHash("CharacterHeal");
-        protected static readonly int CharacterDead = Animator.StringToHash("CharacterDead");
+        private static readonly int CharacterHeal = Animator.StringToHash("CharacterHeal");
+        private static readonly int CharacterDead = Animator.StringToHash("CharacterDead");
 
 
         public float speedMultiplier = 0.45F;
@@ -29,7 +29,7 @@ namespace Parent
         protected Rigidbody2D RGB;
         protected PolygonCollider2D PolygonCollider2D;
 
-        protected float Timer = 0F;
+        protected float Timer;
         public float lastAttackTime;
 
         public HealthBar healthBar;
@@ -71,7 +71,7 @@ namespace Parent
                 healthBar.SetHealth(health);
         }
 
-        public void Damage(Entity otherEntity)
+        protected void Damage(Entity otherEntity)
         {
             if (IsDead() || otherEntity.IsDead()) return;
             otherEntity.Hit(damagePower);

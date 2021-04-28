@@ -119,14 +119,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429cb2a3226f91e438e2e2383bb55dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 0.25
-  maxSpeed: 17.5
+  speedMultiplier: 1.5
+  maxSpeed: 20
   jumpFloat: 575
   fallDeadPosition: -210
   health: 0
   maxHealth: 100
-  damagePower: 12.5
-  attackSpeed: 1.5
+  damagePower: 22.5
+  attackSpeed: 1
   defencePower: 10.5
   lastAttackTime: 0
   healthBar: {fileID: 5888885868833760073, guid: 7e74b633520993a46a641e3aa71df19a,

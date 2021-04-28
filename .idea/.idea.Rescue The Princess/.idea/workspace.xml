@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEngine.TestRunner/Utils/MonoBehaviourTest/MonoBehaviourTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D9F7249-F1DE-41E3-8466-8FEA10E9822F/bf/f70e0bcc/Application.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@4.5.0/Runtime/Core/ProBuilderMesh.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@5.0.4/Runtime/SpriteSkinComposite.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ads/DoubleCoinButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -17,12 +18,21 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Ads/MarketInterstitial.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/PauseButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ResumeButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Sound/MusicController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Level/BuffBarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Character.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Level/GeneralJoinLevelButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Level/SceneLoaderButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ads/MarketInterstitial.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ads/DoubleCoinButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Entity/Princess.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Parent/Entity.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Parent/IAttackable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Loader/Loading.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Intro/IntroAnimator.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rmGFMipp4rlniMcBt3T68Dcp2p" />
@@ -35,6 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="ReSpellerSettingsId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -69,7 +80,8 @@
       <updated>1619573780101</updated>
       <workItem from="1619573819960" duration="597000" />
       <workItem from="1619609986621" duration="1764000" />
-      <workItem from="1619622101436" duration="1807000" />
+      <workItem from="1619622101436" duration="3351000" />
+      <workItem from="1619627416897" duration="38000" />
     </task>
     <servers />
   </component>

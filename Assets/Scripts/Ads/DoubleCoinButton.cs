@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DoubleCoinButton : MonoBehaviour, IButtonListener
 {
     private RewardBasedVideoAd _rewarded;
-    public int coinAmount = 0;
+    public int coinAmount;
 
     private string androidAdId = "ca-app-pub-8847668020520840/2004658060";
     private string iOSAdId = "ca-app-pub-8847668020520840/7256984740";
@@ -24,9 +24,11 @@ public class DoubleCoinButton : MonoBehaviour, IButtonListener
     private void RewardedAdLoad()
     {
         var adId = iOSAdId;
-#if UNITY_ANDROID
-        adId = androidAdId;
-#endif
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            adId = androidAdId;
+        }
+        
         _rewarded = RewardBasedVideoAd.Instance;
         var adRequest = new AdRequest.Builder().Build();
         _rewarded.LoadAd(adRequest, adId);

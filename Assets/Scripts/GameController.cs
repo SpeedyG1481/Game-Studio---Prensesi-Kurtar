@@ -5,17 +5,17 @@ public static class GameController
 {
     public static bool GameStatus = false;
 
-    public static readonly int AttackDamageCost = 100;
-    public static readonly int AttackSpeedCost = 80;
-    public static readonly int DefencePowerCost = 120;
-    public static readonly int SpeedCost = 50;
-    public static readonly int EnemyReducerCost = 175;
+    public const int AttackDamageCost = 100;
+    public const int AttackSpeedCost = 80;
+    public const int DefencePowerCost = 120;
+    public const int SpeedCost = 50;
+    public const int EnemyReducerCost = 175;
 
-    public static readonly float MaxAttackDamageBuff = 15F;
-    public static readonly float MaxAttackSpeedBuff = 1F;
-    public static readonly float MaxDefencePowerBuff = 15F;
-    public static readonly float MaxSpeedPowerBuff = 12.5F;
-    public static readonly float MaxEnemyReducerBuff = 7.5F;
+    public const float MaxAttackDamageBuff = 15F;
+    public const float MaxAttackSpeedBuff = 0.5F;
+    public const float MaxDefencePowerBuff = 15F;
+    public const float MaxSpeedPowerBuff = 12.5F;
+    public const float MaxEnemyReducerBuff = 7.5F;
 
     public static void AddCoin(int amount)
     {
