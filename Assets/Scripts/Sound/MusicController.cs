@@ -21,7 +21,7 @@ namespace Sound
             }
             else
             {
-                _source.volume = 0.06F;
+                _source.volume = 0.5F;
             }
         }
     }
