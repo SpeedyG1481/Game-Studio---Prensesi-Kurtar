@@ -17,8 +17,10 @@ namespace UI.Buttons
         private void OnClick()
         {
             if (pauseGUI == null) return;
+            Time.timeScale = 1;
             pauseGUI.SetActive(false);
             GameController.GameStatus = true;
+           
         }
     }
 }

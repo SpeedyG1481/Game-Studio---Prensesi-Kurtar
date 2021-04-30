@@ -6,7 +6,7 @@ namespace Other
     public class Coin : MonoBehaviour
     {
         public int coinValue = 1;
-        public float flipSpeed = 0.1F;
+        public float flipSpeed = 0.25F;
         public ParticleSystem effect;
         public GameObject completeLevelGUI;
         public Parent.Entity[] mustBeDead;

@@ -26,13 +26,11 @@ namespace Parent
         public float defencePower = 10.5F;
 
         protected Animator Animator;
-        protected Rigidbody2D RGB;
+        public Rigidbody2D rgb;
         protected PolygonCollider2D PolygonCollider2D;
 
         protected float Timer;
         public float lastAttackTime;
-
-        public HealthBar healthBar;
 
 
         private void FixedUpdate()
@@ -49,10 +47,8 @@ namespace Parent
         private void Start()
         {
             health = maxHealth;
-            if (healthBar != null)
-                healthBar.SetMaxHealth(maxHealth);
             Animator = GetComponent<Animator>();
-            RGB = GetComponent<Rigidbody2D>();
+            rgb = GetComponent<Rigidbody2D>();
             PolygonCollider2D = GetComponent<PolygonCollider2D>();
         }
 
@@ -66,9 +62,6 @@ namespace Parent
                 health = 0;
                 Animator.SetTrigger(CharacterDead);
             }
-
-            if (healthBar != null)
-                healthBar.SetHealth(health);
         }
 
         protected void Damage(Entity otherEntity)

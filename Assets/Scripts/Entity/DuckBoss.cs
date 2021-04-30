@@ -33,7 +33,7 @@ namespace Entity
             {
                 _deadStatus = true;
                 PolygonCollider2D.isTrigger = true;
-                RGB.gravityScale = 0F;
+                rgb.gravityScale = 0F;
                 Invoke("Kill", 5.5F);
             }
             else if (!IsDead())

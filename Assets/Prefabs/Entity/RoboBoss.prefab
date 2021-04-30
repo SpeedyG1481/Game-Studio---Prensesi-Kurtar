@@ -652,7 +652,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
   m_Mass: 53.581684
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -700,6 +700,7 @@ MonoBehaviour:
   damagePower: 18
   attackSpeed: 5.75
   defencePower: 22.75
+  rgb: {fileID: 0}
   lastAttackTime: 0
   healthBar: {fileID: 0}
   distanceOfDetector: 35

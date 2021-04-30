@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16ef293ea064b269ad12abfb1aff35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flipSpeed: 0.1
+  flipSpeed: 1.5
   effect: {fileID: 6931908264797927066, guid: f9cf6e0965c19054fa875abffe1e91a7, type: 3}
-  completeLevelGUI: {fileID: 0}
   mustBeDead: []
+  level: 5
 --- !u!1001 &2426306885878527684
 PrefabInstance:
   m_ObjectHideFlags: 0

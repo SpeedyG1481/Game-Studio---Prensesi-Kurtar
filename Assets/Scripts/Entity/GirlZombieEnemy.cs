@@ -33,13 +33,13 @@ namespace Entity
             {
                 _deadStatus = true;
                 PolygonCollider2D.isTrigger = true;
-                RGB.gravityScale = 0F;
+                rgb.gravityScale = 0F;
                 Invoke("Kill", 5.5F);
             }
             else if (!IsDead())
             {
                 ZombieController();
-                Animator.SetBool(CharacterJump, !Mathf.Approximately(RGB.velocity.y, 0));
+                Animator.SetBool(CharacterJump, !Mathf.Approximately(rgb.velocity.y, 0));
             }
         }
 
@@ -136,8 +136,8 @@ namespace Entity
 
         public void Jump()
         {
-            if (!Mathf.Approximately(RGB.velocity.y, 0)) return;
-            RGB.AddForce(Vector3.up * jumpFloat, ForceMode2D.Impulse);
+            if (!Mathf.Approximately(rgb.velocity.y, 0)) return;
+            rgb.AddForce(Vector3.up * jumpFloat, ForceMode2D.Impulse);
         }
     }
 }

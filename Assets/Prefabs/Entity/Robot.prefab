@@ -126,6 +126,7 @@ MonoBehaviour:
   damagePower: 10.75
   attackSpeed: 3.75
   defencePower: 12.75
+  rgb: {fileID: 0}
   lastAttackTime: 0
   healthBar: {fileID: 0}
   distanceOfDetector: 25
@@ -144,7 +145,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
   m_Mass: 7.8948545
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -169,7 +170,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.67, y: 5.56}
+    oldSize: {x: 5.670757, y: 5.5600004}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

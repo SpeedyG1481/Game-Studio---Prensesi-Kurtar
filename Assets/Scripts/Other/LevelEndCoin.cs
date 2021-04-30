@@ -1,4 +1,5 @@
 ﻿using Sound;
+using TMPro;
 using UI.Loader;
 using UnityEngine;
 
@@ -6,15 +7,35 @@ namespace Other
 {
     public class LevelEndCoin : MonoBehaviour
     {
+        private TextMeshProUGUI _text;
+        private GameObject _completeLevelGUI;
+
+        private float _timer;
+        private bool _isEnded;
+
         private int coinValue = 10;
         public float flipSpeed = 0.1F;
         public ParticleSystem effect;
-        public GameObject completeLevelGUI;
+
         public Parent.Entity[] mustBeDead;
         public Scenes level;
 
+        private void Start()
+        {
+            _text = GameObject.Find("TimeText").GetComponent<TextMeshProUGUI>();
+            _completeLevelGUI =GameObject.Find("Tuval").transform.Find("Canvas").gameObject.transform.Find("EndLevelScreen").gameObject;
+            _timer = 0;
+        }
+
         void Update()
         {
+            if (!_isEnded)
+            {
+                _timer += Time.deltaTime;
+                GameController.GlobalLevelTimer = _timer;
+            }
+
+            _text.text = _timer.ToString("F1");
             transform.Rotate(0, flipSpeed, 0);
         }
 
@@ -29,7 +50,8 @@ namespace Other
                     SoundEffectController.Play(SoundEnum.Coin);
                     GameController.GameStatus = false;
                     Instantiate(effect, transform.position, Quaternion.Euler(0, 0, 0));
-                    completeLevelGUI.SetActive(true);
+                    _completeLevelGUI.SetActive(true);
+                    _isEnded = true;
                     EndLevel();
                 }
             }

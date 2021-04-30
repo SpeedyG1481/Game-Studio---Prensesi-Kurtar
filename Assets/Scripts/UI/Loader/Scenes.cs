@@ -4,7 +4,6 @@
     {
         Loader,
         Menu,
-        Rankings,
         Market,
         Levels,
         Level1,

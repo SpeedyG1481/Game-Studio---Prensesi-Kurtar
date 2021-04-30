@@ -97,8 +97,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 15.728919
+  m_UseAutoMass: 0
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 6
@@ -121,20 +121,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMultiplier: 1.5
   maxSpeed: 20
-  jumpFloat: 575
+  jumpFloat: 37.5
   fallDeadPosition: -210
   health: 0
   maxHealth: 100
   damagePower: 22.5
   attackSpeed: 1
   defencePower: 10.5
+  rgb: {fileID: 0}
   lastAttackTime: 0
-  healthBar: {fileID: 5888885868833760073, guid: 7e74b633520993a46a641e3aa71df19a,
+  healthBar: {fileID: 0}
+  push: 17.5
+  damageShow: {fileID: 9216782221551637852, guid: ba396abc6be4250449a4260bb92b7c06,
     type: 3}
   deadGUI: {fileID: 0}
   joystick: {fileID: 0}
-  attackButton: {fileID: 0}
-  jumpButton: {fileID: 0}
 --- !u!60 &4893750432047135781
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.87, y: 7.07}
+    oldSize: {x: 5.882461, y: 7.07}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -3,6 +3,16 @@ using UnityEngine;
 
 public static class GameController
 {
+    public static float GlobalLevelTimer = 0;
+    public static float GlobalLevelPointer = 0;
+    
+    
+    public const int RoboEnemyPoint = 5;
+    public const int ZombieEnemyPoint = 3;
+    public const int GirlZombieEnemyPoint = 3;
+    public const int RoboBossPoint = 25;
+    public const int DuckBossPoint = 20;
+
     public static bool GameStatus = false;
     public const bool DebugMode = true;
 
